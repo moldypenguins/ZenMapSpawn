@@ -1,0 +1,4 @@
+<DayZLayout>
+  <GridLayout name="SpawnList" />
+  <Button name="SpawnButton" text="Spawn Here" />
+</DayZLayout>

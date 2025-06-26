@@ -1,0 +1,10 @@
+name = "ZenMapSpawn";
+picture = "";
+logoSmall = "";
+logo = "";
+logoOver = "";
+tooltip = "ZenMapSpawn";
+overview = "Adds spawn point selection using ZenMap. Supports respawning on beds.";
+action = "";
+author = "moldypenguins";
+version = "1.0";
