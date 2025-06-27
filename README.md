@@ -8,7 +8,7 @@ It is also compatible with Bed-Respawning, allowing players to respawn at beds t
 
 ## Content
 - [Context Summary](#context-summary)
-- [license](#license)
+- [License](#license)
 
 
 ## Context Summary  
