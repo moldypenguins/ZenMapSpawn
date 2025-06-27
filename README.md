@@ -57,7 +57,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 Copyright © 2025 moldypenguins. Licensed under the GNU General Public License Version 3.  
-See (LICENSE.md)[LICENSE.md] or https://www.gnu.org/licenses/gpl-3.0.html for more details.
+See [LICENSE.md](LICENSE.md) or https://www.gnu.org/licenses/gpl-3.0.html for more details.
 
 
 <!-- Media -->
