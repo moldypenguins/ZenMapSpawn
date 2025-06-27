@@ -1,8 +1,8 @@
 # Zens Map Spawn
 [![Zens Map Spawn][banner-img]][github-href]
 
-![GitHub Version](https://img.shields.io/github/v/tag/moldypenguins/ZenMapSpawn?include_prereleases&sort=semver&style=for-the-badge&logo=github&label=version)
-![GitHub License](https://img.shields.io/github/license/moldypenguins/ZenMapSpawn?style=for-the-badge&logo=github)
+![GitHub Version](https://img.shields.io/github/v/tag/moldypenguins/ZenMapSpawn?include_prereleases&sort=semver&style=for-the-badge&logo=github&label=release)
+![GitHub License](https://img.shields.io/github/license/moldypenguins/ZenMapSpawn?style=for-the-badge&logo=github&color=blue)
 [![GitHub Sponsors][sponsors-src]][sponsors-href]
 
 ## Overview
