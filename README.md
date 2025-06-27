@@ -62,7 +62,7 @@ See (LICENSE.md)[LICENSE.md] or https://www.gnu.org/licenses/gpl-3.0.html for mo
 
 <!-- Media -->
 [github-href]: https://github.com/moldypenguins/ZenMapSpawn
-[discord-img]:.github/discord.png
+[discord-img]: https://github.com/moldypenguins/ZenMapSpawn/blob/main/.github/discord.png
 [sponsors-href]: https://github.com/sponsors/moldypenguins
 [sponsors-src]: https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=EA4AAA
 
