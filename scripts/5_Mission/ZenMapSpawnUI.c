@@ -1,70 +1,29 @@
+// ZenMapSpawnUI.c
+// Handles client-side map marker click and sends RPC to the server for ZenMapSpawn
 
-class ZenMapSpawnUI extends UIScriptedMenu
+// This is an example UI or manager class for handling marker clicks
+class ZenMapSpawnUI
 {
-  protected GridLayout m_SpawnList;
-  protected ButtonWidget m_SpawnButton;
-  protected int m_SelectedIndex = -1;
-  protected ref array<ref ZenMapSpawnPoint> m_SpawnPoints;
-
-  override Widget Init()
+  // Call this from your actual UI event/callback when a marker is clicked
+  void OnMapMarkerClicked(vector markerPos, string markerLabel, int markerColor)
   {
-    layoutRoot = GetGame().GetWorkspace().CreateWidgets("ZenMapSpawn/gui/layouts/ZenMapSpawnUI.layout");
+    ZenMapMarkerData data = new ZenMapMarkerData();
+    data.Init(markerPos, markerLabel, markerColor);
 
-    m_SpawnList = GridLayout.Cast(layoutRoot.FindAnyWidget("SpawnList"));
-    m_SpawnButton = ButtonWidget.Cast(layoutRoot.FindAnyWidget("SpawnButton"));
-
-    ZenMapSpawnManager manager = new ZenMapSpawnManager();
-    m_SpawnPoints = manager.GetSpawnPoints();
-
-    // Add bed spawn if available
-    PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-    if (ZenMapSpawnBedManager.HasBed(player))
-    {
-      m_SpawnPoints.InsertAt(new ZenMapSpawnPoint("My Bed", ZenMapSpawnBedManager.GetBedSpawnPosition(player)), 0);
-    }
-
-    PopulateSpawnList();
-    return layoutRoot;
+    ScriptRPC rpc = new ScriptRPC();
+    data.WriteToContext(rpc);
+    // Send to server
+    GetGame().RPCSingleParam(null, ZenMapConstants.ZEN_MAP_RPC_MARKER_CLICK, rpc, true, null);
   }
+}
 
-  void PopulateSpawnList()
-  {
-    for (int i = 0; i < m_SpawnPoints.Count(); i++)
-    {
-      ZenMapSpawnPoint point = m_SpawnPoints[i];
-      ButtonWidget btn = ButtonWidget.Cast(GetGame().GetWorkspace().CreateWidgets("gui/layouts/SpawnListItem.layout", m_SpawnList));
-      btn.SetText(point.name);
-      btn.SetUserID(i);
-    }
-  }
-
-  override bool OnClick(Widget w, int x, int y, int button)
-  {
-    if (w == m_SpawnButton && m_SelectedIndex >= 0)
-    {
-      ZenMapSpawnPoint selected = m_SpawnPoints[m_SelectedIndex];
-      GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(TeleportPlayer, 100, false, selected.position);
-      Close();
-      return true;
-    }
-
-    // Handle spawn list item selection
-    ButtonWidget btn = ButtonWidget.Cast(w);
-    if (btn && btn.GetUserID() >= 0)
-    {
-      m_SelectedIndex = btn.GetUserID();
-      return true;
-    }
-
-    return false;
-  }
-
-  void TeleportPlayer(vector pos)
-  {
-    PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-    if (player)
-    {
-      player.SetPosition(pos);
-    }
-  }
+// Example usage (replace this with your actual UI hookup)
+// This part would typically be connected to your map UI logic
+void ZenMapMarkerClick()
+{
+  ZenMapSpawnUI ui = new ZenMapSpawnUI();
+  vector pos = "1234 0 5678";
+  string label = "My Marker";
+  int color = 0xFF00FF00; // ARGB green
+  ui.OnMapMarkerClicked(pos, label, color);
 }
