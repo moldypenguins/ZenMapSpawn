@@ -19,7 +19,7 @@ Required: [@ZenarchistCode/ZenMap](https://github.com/ZenarchistCode/ZenMap)
 Optional: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistCode/ZenSleepV2)
 
 ### See Also
-[@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)
+[@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)  
 [@Krypton91/BasicSpawnSelect](https://github.com/Krypton91/BasicSpawnSelect)  
 
 ### References
