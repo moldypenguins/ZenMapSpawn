@@ -8,8 +8,8 @@ class ZenMapSpawnConfig : Managed
   // Bed respawning enabled (true) or disabled (false)
   bool BedRespawningEnabled = true;
 
-  // Maximum number of times a player can respawn at a bed (0 = infinite)
-  int MaxBedRespawns = 0;
+  // Cooldown in seconds for spawn selection (0 = disabled)
+  int SpawnSelectCooldownSeconds = 60;
 
   void Load()
   {
