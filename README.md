@@ -53,7 +53,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 [![Discord][moldypenguins-discord]](https://discordapp.com/users/346771877211144194)
 [![Telegram][moldypenguins-telegram]](https://t.me/moldypenguins)
 
-[![Join Discord](discord-img)](https://discord.gg/WrDPtDh)
+[![Join Discord][discord-img]](https://discord.gg/WrDPtDh)
 
 ## License
 Copyright © 2025 moldypenguins. Licensed under the GNU General Public License Version 3.  
