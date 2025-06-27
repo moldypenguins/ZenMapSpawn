@@ -1,4 +1,5 @@
-# Zens Map Spawn  
+# Zens Map Spawn
+
 ![GitHub Version](https://img.shields.io/github/v/tag/moldypenguins/ZenMapSpawn?include_prereleases&sort=semver&style=for-the-badge&logo=github&label=version)
 ![GitHub License](https://img.shields.io/github/license/moldypenguins/ZenMapSpawn?style=for-the-badge&logo=github)
 [![GitHub Sponsors][sponsors-src]][sponsors-href]
@@ -38,7 +39,8 @@ This project has adopted the code of conduct defined by the [Contributor Covenan
 For more information see the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Issues / Support
-See [SECURITY.md](SECURITY.md) for feature requests or bug reports.  
+Use [Issues](https://github.com/moldypenguins/ZenMapSpawn/issues) to create a feature request or bug report.  
+See [SECURITY.md](SECURITY.md) for more information.  
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.  
@@ -49,17 +51,23 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 [![GitHub][moldypenguins-github]](https://github.com/moldypenguins)
 [![Discord][moldypenguins-discord]](https://discordapp.com/users/346771877211144194)
-[![Telegram][moldypenguins-telegram]](https://t.me/moldypenguins)  
+[![Telegram][moldypenguins-telegram]](https://t.me/moldypenguins)
+
+[![Join Discord](discord-img)](https://discord.gg/WrDPtDh)
 
 ## License
 Copyright © 2025 moldypenguins. Licensed under the GNU General Public License Version 3.  
 See (LICENSE.md)[LICENSE.md] or https://www.gnu.org/licenses/gpl-3.0.html for more details.
 
 
-<!-- Badges -->
+<!-- Media -->
+[github-href]: https://github.com/moldypenguins/ZenMapSpawn
+[discord-img]:.github/discord.png
+[sponsors-href]: https://github.com/sponsors/moldypenguins
+[sponsors-src]: https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=EA4AAA
+
 [moldypenguins-github]: https://img.shields.io/badge/moldypenguins-6e5494?labelColor=555555&logo=github&style=for-the-badge
 [moldypenguins-discord]: https://img.shields.io/badge/@moldypenguins-5865F2?labelColor=555555&logo=discord&style=for-the-badge
 [moldypenguins-telegram]: https://img.shields.io/badge/@moldypenguins-27A7E7?labelColor=555555&logo=telegram&style=for-the-badge
-[sponsors-src]: https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=EA4AAA
-[sponsors-href]: https://github.com/sponsors/moldypenguins
-[github-href]: https://github.com/moldypenguins/ZenMapSpawn
+
+
