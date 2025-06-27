@@ -45,7 +45,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Author
 <ins>_**Craig Roberts**_</ins>  
-~ _moldypenguins_
+ ~ _moldypenguins_
 
 [![GitHub][moldypenguins-github]](https://github.com/moldypenguins)
 [![Discord][moldypenguins-discord]](https://discordapp.com/users/346771877211144194)
