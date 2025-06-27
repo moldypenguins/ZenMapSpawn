@@ -15,8 +15,8 @@ It is also compatible with Bed-Respawning, allowing players to respawn at beds t
 ## Attributions
 
 ### Dependencies
-Required dependency: [@ZenarchistCode/ZenMap](https://github.com/ZenarchistCode/ZenMap)  
-Optional dependency: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistCode/ZenSleepV2)
+Required: [@ZenarchistCode/ZenMap](https://github.com/ZenarchistCode/ZenMap)  
+Optional: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistCode/ZenSleepV2)
 
 ### See Also
 [@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)
