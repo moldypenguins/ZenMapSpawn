@@ -18,9 +18,15 @@ Compatibility required with: @ZenarchistCode/ZenSleepV2
 
 <h4>Code Style Requirement</h4>
 File-level comments:<br />
-```clang // <Filename>```<br />
-```clang // <Short description of what this file does>```<br />
+```c
+// <Filename>
+```
+```c
+// <Short description of what this file does>
+```
 Function-level comments:<br />
-```clang // <Short description of what this function does>```<br />
+```c
+// <Short description of what this function does>
+```
 - Never remove existing comments from code.<br />
 - Always add new comments as above to any code you generate or modify.
