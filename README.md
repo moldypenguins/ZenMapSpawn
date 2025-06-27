@@ -7,7 +7,7 @@ It is designed to work with Zens Map Enhanced and provides a more flexible and u
 It is also compatible with Bed-Respawning, allowing players to respawn at beds they have placed in the world.
 
 ## Content
-- (Context Summary)[#context-summary]
+- [Context Summary](#context-summary)
 
 
 
