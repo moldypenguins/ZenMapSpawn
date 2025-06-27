@@ -8,12 +8,11 @@ It is designed to work with Zens Map Enhanced and provides a more flexible and u
 It is also compatible with Bed-Respawning, allowing players to respawn at beds they have placed in the world.
 
 ## Content
-- [Context Summary](#context-summary)
+- [Attributions](#attributions)
 - [License](#license)
 
 
-## Context Summary  
-**A concise summary for persistent context**  
+## Attributions
 
 ### Dependencies
 Required dependency: [@ZenarchistCode/ZenMap](https://github.com/ZenarchistCode/ZenMap)  
@@ -23,26 +22,12 @@ Optional dependency: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistC
 [@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)
 [@Krypton91/BasicSpawnSelect](https://github.com/Krypton91/BasicSpawnSelect)  
 
-### Important References  
-[@BohemiaInteractive/DayZ-Central-Economy](https://github.com/BohemiaInteractive/DayZ-Central-Economy)  
-[@BohemiaInteractive/DayZ-Misc](https://github.com/BohemiaInteractive/DayZ-Misc)  
-[@BohemiaInteractive/DayZ-Samples](https://github.com/BohemiaInteractive/DayZ-Samples)  
+### References
 [@Arkensor/DayZ-CommunityFramework](https://github.com/Arkensor/DayZ-CommunityFramework)  
+[@BohemiaInteractive/DayZ-Central-Economy](https://github.com/BohemiaInteractive/DayZ-Central-Economy)
+[@BohemiaInteractive/DayZ-Samples](https://github.com/BohemiaInteractive/DayZ-Samples)  
+[@BohemiaInteractive/DayZ-Misc](https://github.com/BohemiaInteractive/DayZ-Misc)  
 
-### Code Style Requirement  
-File-level comments:  
-```c
-// <Filename>
-```
-```c
-// <Short description of what this file does>
-```
-Function-level comments:  
-```c
-// <Short description of what this function does>
-```
-- Never remove existing comments from code.
-- Always add new comments as above to any code you generate or modify.
 
 
 ## License
