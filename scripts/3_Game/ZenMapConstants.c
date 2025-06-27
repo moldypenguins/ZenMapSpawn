@@ -1,4 +1,4 @@
-class ZenMapConstants
+class ZenMapSpawnConstants
 {
-  static const int ZEN_MAP_RPC_MARKER_CLICK = 6985174235;
+  static const int RPC_MARKER_CLICK = 6985174235;
 }

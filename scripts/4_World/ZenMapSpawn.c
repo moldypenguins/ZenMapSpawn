@@ -81,7 +81,7 @@ void ZenMapSpawn_OnMarkerClicked(vector markerPos, string markerLabel, int marke
   data.WriteToContext(rpc);
   GetGame().RPCSingleParam(
     null,
-    ZenMapConstants.ZEN_MAP_RPC_MARKER_CLICK,
+    ZenMapSpawnConstants.RPC_MARKER_CLICK,
     rpc,
     true,
     null

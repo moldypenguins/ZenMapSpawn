@@ -13,7 +13,7 @@ class ZenMapSpawnUI
     ScriptRPC rpc = new ScriptRPC();
     data.WriteToContext(rpc);
     // Send to server
-    GetGame().RPCSingleParam(null, ZenMapConstants.ZEN_MAP_RPC_MARKER_CLICK, rpc, true, null);
+    GetGame().RPCSingleParam(null, ZenMapSpawnConstants.RPC_MARKER_CLICK, rpc, true, null);
   }
 }
 
