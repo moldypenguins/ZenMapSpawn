@@ -1,4 +1,5 @@
 # Zens Map Spawn
+[![Zens Map Spawn][banner-img]][github-href]
 
 ![GitHub Version](https://img.shields.io/github/v/tag/moldypenguins/ZenMapSpawn?include_prereleases&sort=semver&style=for-the-badge&logo=github&label=version)
 ![GitHub License](https://img.shields.io/github/license/moldypenguins/ZenMapSpawn?style=for-the-badge&logo=github)
@@ -57,7 +58,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 Copyright © 2025 moldypenguins. Licensed under the GNU General Public License Version 3.  
-See [LICENSE.md](LICENSE.md) or https://www.gnu.org/licenses/gpl-3.0.html for more details.
+See [LICENSE.md](LICENSE.md) or https://www.gnu.org/licenses/gpl-3.0.html for more information.
 
 
 <!-- Media -->
