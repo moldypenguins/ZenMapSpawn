@@ -1,5 +1,6 @@
 # Zens Map Spawn  
-*Version: 0.0.0-alpha*
+![GitHub Version](https://img.shields.io/github/v/tag/moldypenguins/ZenMapSpawn?include_prereleases&sort=semver&style=for-the-badge&logo=github&label=version)
+
 
 ## Overview
 Zens Map Spawn is a mod for DayZ that enhances the spawning system by allowing players to spawn at specific locations on the map. 
