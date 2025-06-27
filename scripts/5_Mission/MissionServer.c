@@ -1,9 +1,20 @@
-// ZenMapSpawnServer.c
+// MissionServer.c
 // Handles server-side processing of ZenMapSpawn marker RPCs, including cooldown and randomization logic
 
 modded class MissionServer
 {
-  // This function handles the RPC when a player clicks a spawn marker on the client map.
+  // ZenMap spawn manager instance
+  ref ZenMapSpawnManager m_ZenMapSpawnManager;
+
+  // Constructor override to initialize ZenMapSpawnManager
+  void MissionServer()
+  {
+    super.MissionServer();
+    // Initialize spawn manager
+    m_ZenMapSpawnManager = new ZenMapSpawnManager();
+  }
+
+  // Handles incoming RPCs from the client, particularly marker click events
   override void OnRPC(PlayerIdentity sender, Object target, int rpc_type, ParamsReadContext ctx)
   {
     super.OnRPC(sender, target, rpc_type, ctx);
@@ -48,26 +59,33 @@ modded class MissionServer
     }
   }
 
-  // Returns a random valid spawn position. Implement actual logic.
+  // Returns a random valid spawn position from loaded spawn points
   vector GetRandomValidSpawnPoint()
   {
-    // TODO: Implement your actual spawn point list logic
+    array<ref ZenMapSpawnPoint> points = m_ZenMapSpawnManager.GetSpawnPoints();
+    if (points && points.Count() > 0)
+    {
+      int idx = Math.RandomInt(0, points.Count());
+      return points[idx].position;
+    }
+    // Fallback: center of map
     return "7500 0 7500";
   }
 
-  // This function determines if the marker is a valid spawn marker.
-  // Implement actual validation logic as needed.
+  // Checks if the given marker matches any valid spawn marker
   bool IsValidSpawnMarker(ZenMapMarkerData markerData)
   {
-    // Example: Check against known spawn points, or always return true for now
-    return true;
-  }
-
-  // This function determines if the player is in a spawning state.
-  // Customize this logic for your mod/gameplay.
-  bool IsPlayerSpawning(PlayerBase player)
-  {
-    // Example: check if player is dead or in a respawn UI
-    return player.IsUnconscious() || player.IsDead() || player.GetHealth("", "") <= 0;
+    array<ref ZenMapSpawnPoint> points = m_ZenMapSpawnManager.GetSpawnPoints();
+    if (points)
+    {
+      foreach(ZenMapSpawnPoint spt : points)
+      {
+        if (vector.Distance(spt.position, markerData.pos) < 1.0)
+        {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }

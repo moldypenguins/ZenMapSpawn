@@ -1,14 +1,16 @@
 // ZenMapSpawn.c
-// Show map and add spawn markers using ZenMap API
+// Handles map spawn logic and marker display using ZenMap API
 
-static ref array<ref ZenMapSpawnPoint> g_ZenMapSpawnPoints;
+ref ZenMapSpawnManager g_ZenMapSpawnManager; // Global manager instance
 
+// ZenMapSpawnPoint class for map spawn points (use ZenMapSpawnPoint from ZenMapSpawnManager)
 class ZenMapSpawnPoint
 {
   vector Position;
   string Name;
   string IconPath;
 
+  // Constructor for ZenMapSpawnPoint
   void ZenMapSpawnPoint(vector pos, string name, string iconPath)
   {
     Position = pos;
@@ -17,41 +19,23 @@ class ZenMapSpawnPoint
   }
 }
 
+// Loads spawn points using ZenMapSpawnManager
 void ZenMapSpawn_LoadSpawnPoints()
 {
-  if (!g_ZenMapSpawnPoints) g_ZenMapSpawnPoints = new array<ref ZenMapSpawnPoint>;
-  g_ZenMapSpawnPoints.Clear();
-  g_ZenMapSpawnPoints.Insert(new ZenMapSpawnPoint("8229.1 471.2 9531.2", "Cherno", "ZenMap/data/icons/heli.paa"));
-  g_ZenMapSpawnPoints.Insert(new ZenMapSpawnPoint("1200 0 3500", "Kamenka", "ZenMap/data/icons/heli.paa"));
-  g_ZenMapSpawnPoints.Insert(new ZenMapSpawnPoint("4300 0 8000", "Vybor", "ZenMap/data/icons/heli.paa"));
-}
-
-modded class CustomMission
-{
-  override void OnInit()
-  {
-    super.OnInit();
-    auto zenMapPlugin = GetZenMapPlugin();
-    if (zenMapPlugin)
-    {
-      zenMapPlugin.OnMarkerClicked.Insert(ZenMapSpawn_OnMarkerClicked);
-    }
-  }
-
-  override void OnClientRespawnEvent(PlayerBase player, int respawnType)
-  {
-    ZenMapSpawn_LoadSpawnPoints();
-    ZenMapSpawn_ShowMapAndMarkers(player);
+  if (!g_ZenMapSpawnManager) {
+    g_ZenMapSpawnManager = new ZenMapSpawnManager();
   }
 }
 
+// Shows map and adds spawn markers for the player
 void ZenMapSpawn_ShowMapAndMarkers(PlayerBase player)
 {
   auto zenMapPlugin = GetZenMapPlugin();
-  if (zenMapPlugin)
+  if (zenMapPlugin && g_ZenMapSpawnManager)
   {
     zenMapPlugin.ShowMapForPlayer(player, true);
-    foreach(ZenMapSpawnPoint spt : g_ZenMapSpawnPoints)
+    array<ref ZenMapSpawnPoint> points = g_ZenMapSpawnManager.GetSpawnPoints();
+    foreach(ZenMapSpawnPoint spt : points)
     {
       string markerName = "ZenMapSpawn_" + spt.Name;
       int color = -65536;
@@ -61,17 +45,20 @@ void ZenMapSpawn_ShowMapAndMarkers(PlayerBase player)
   }
 }
 
+// Removes all spawn markers for the player
 void ZenMapSpawn_RemoveAllSpawnMarkers(PlayerBase player)
 {
   auto zenMapPlugin = GetZenMapPlugin();
-  if (!zenMapPlugin) return;
-  foreach(ZenMapSpawnPoint spt : g_ZenMapSpawnPoints)
+  if (!zenMapPlugin || !g_ZenMapSpawnManager) return;
+  array<ref ZenMapSpawnPoint> points = g_ZenMapSpawnManager.GetSpawnPoints();
+  foreach(ZenMapSpawnPoint spt : points)
   {
     string markerName = "ZenMapSpawn_" + spt.Name;
     zenMapPlugin.RemoveMarkerByName(player, markerName);
   }
 }
 
+// Handles marker click events
 void ZenMapSpawn_OnMarkerClicked(vector markerPos, string markerLabel, int markerColor)
 {
   ZenMapMarkerData data = new ZenMapMarkerData();
@@ -86,4 +73,26 @@ void ZenMapSpawn_OnMarkerClicked(vector markerPos, string markerLabel, int marke
     true,
     null
   );
+}
+
+// Mission hooks for CustomMission
+modded class CustomMission
+{
+  // Initializes ZenMap plugin and hooks marker clicked event
+  override void OnInit()
+  {
+    super.OnInit();
+    auto zenMapPlugin = GetZenMapPlugin();
+    if (zenMapPlugin)
+    {
+      zenMapPlugin.OnMarkerClicked.Insert(ZenMapSpawn_OnMarkerClicked);
+    }
+  }
+
+  // Loads spawn points and shows map on player respawn
+  override void OnClientRespawnEvent(PlayerBase player, int respawnType)
+  {
+    ZenMapSpawn_LoadSpawnPoints();
+    ZenMapSpawn_ShowMapAndMarkers(player);
+  }
 }
