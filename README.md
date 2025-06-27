@@ -44,7 +44,9 @@ See [SECURITY.md](SECURITY.md) for feature requests or bug reports.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.  
 
 ## Author
-<ins>_**Craig Roberts**_</ins> _[moldypenguins]_  
+<ins>_**Craig Roberts**_</ins>  
+_[~ moldypenguins]_
+
 [![GitHub][moldypenguins-github]](https://github.com/moldypenguins)
 [![Discord][moldypenguins-discord]](https://discordapp.com/users/346771877211144194)
 [![Telegram][moldypenguins-telegram]](https://t.me/moldypenguins)  
