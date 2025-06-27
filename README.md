@@ -15,10 +15,13 @@ It is also compatible with Bed-Respawning, allowing players to respawn at beds t
 ## Context Summary  
 **A concise summary for persistent context**  
 
-### Dependencies & Compatibility  
+### Dependencies
 Required dependency: [@ZenarchistCode/ZenMap](https://github.com/ZenarchistCode/ZenMap)  
-Optional dependency: [@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)  
-Compatibility required with: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistCode/ZenSleepV2)  
+Optional dependency: [@ZenarchistCode/ZenSleepV2](https://github.com/ZenarchistCode/ZenSleepV2)
+
+### See Also
+[@Mka0207/DayZ-Bed-Respawning](https://github.com/Mka0207/DayZ-Bed-Respawning)
+[@Krypton91/BasicSpawnSelect](https://github.com/Krypton91/BasicSpawnSelect)  
 
 ### Important References  
 [@BohemiaInteractive/DayZ-Central-Economy](https://github.com/BohemiaInteractive/DayZ-Central-Economy)  
